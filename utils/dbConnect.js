@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const process = require('../next.config');
+// const process = require('../next.config');
 
 const connection = {};
 
@@ -8,7 +8,7 @@ async function dbConnect() {
     return;
   }
 
-  const db = await mongoose.connect(process.env.MONGO_URI, {
+  const db = await mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   });
